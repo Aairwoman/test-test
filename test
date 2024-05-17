@@ -1,0 +1,24 @@
+% Define the note frequencies (in Hz)
+F_A = 440; % Frequency of note A
+F_B = 493.88; % Frequency of note B
+F_C = 523.25; % Frequency of note C
+
+% Define the note durations (in seconds)
+t_A = 0.5; % Duration of note A
+t_B = 0.25; % Duration of note B
+t_C = 0.75; % Duration of note C
+
+% Define the pause duration (in seconds)
+pause_duration = 0.5; % Pause duration between notes
+
+% Generate the notes
+A = sin(2*pi*F_A*(0:1/8000:t_A));
+B = sin(2*pi*F_B*(0:1/8000:t_B));
+C = sin(2*pi*F_C*(0:1/8000:t_C));
+
+% Play the notes with a pause in between
+sound(A, 8000);
+pause(pause_duration);
+sound(B, 8000);
+pause(pause_duration);
+sound(C, 8000);
